@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+a=$(ls | xargs)
+
+for i in $a
+do
+    if  [ $(basename $i) != "ferris" ] ; then
+        rm -rf $i
+    fi
+done
